@@ -216,16 +216,18 @@
                 };
             });
             function newsHeaven(Vlang){
-                    //alert(document.getElementById('Memail').value);
-                    var email3=document.getElementById('Memail')
-                    if ((email3.value==null)||(email3.value=="")){
-                        alertify.alert(AlertEmail[Vlang])
-                        email3.focus()
-                        return false}
-                    if (Emailcheck(email3.value)==false){
-                        //email.value=""
-                        email3.focus()
-                        return false}
+                //alert(document.getElementById('Memail').value);
+                var email3=document.getElementById('Memail')
+                if ((email3.value==null)||(email3.value=="")){
+                    alertify.alert(AlertEmail[Vlang])
+                    email3.focus()
+                    return false
+                }
+                if (Emailcheck(email3.value)==false){
+                    //email.value=""
+                    email3.focus()
+                    return false
+                }
                 
                 return true
             }
