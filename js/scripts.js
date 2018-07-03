@@ -35,6 +35,7 @@
 			http://modernizr.com/download/#-csstransforms3d-csstransitions-video-touch-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
 *************************************************** **/
 	window.width = jQuery(window).width();
+	const plugin_path = "/";
 
 	/* Init */
 	jQuery(window).ready(function () {
@@ -50,7 +51,7 @@
 
 		/* --- */
 		if(jQuery("html").hasClass("chrome") && jQuery("body").hasClass("smoothscroll")) {
-			loadScript(plugin_path + 'smoothscroll.js', function() {
+			loadScript(plugin_path + 'js/smooth-scroll.js', function() {
 				jQuery.smoothScroll();
 			});
 		}
@@ -786,7 +787,7 @@
 
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'jquery.nav.min.js', function() {
+			loadScript(plugin_path + 'js/jquery.singlePageNav.min', function() {
 
 				jQuery(_container).onePageNav({
 					currentClass: 		'active',
@@ -1286,7 +1287,7 @@
 		var _container = jQuery('#YTPlayer');
 		
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'jquery.mb.YTPlayer.min.js', function() {
+			loadScript(plugin_path + 'jquery.mb.YTPlayer/jquery.mb.YTPlayer.min.js', function() {
 
 
 				if(jQuery().mb_YTPlayer) {
@@ -1337,7 +1338,7 @@
 		var _container = jQuery('.mix-grid');
 		
 		if(_container.length > 0) {
-			loadScript(plugin_path + 'mixitup/jquery.mixitup.min.js', function() {
+			loadScript(plugin_path + 'mixitup/mixitup.js', function() {
 
 				if(jQuery().mixitup) {
 
@@ -1478,7 +1479,7 @@
 		
 		if(_container.length > 0) {
 
-			loadScript(plugin_path + 'text-rotator/jquery.simple-text-rotator.min.js', function() {
+			loadScript(plugin_path + 'text-rotator/jquery.simple-text-rotator.js', function() {
 
 				_container.each(function() {
 					var _t 			= jQuery(this),
