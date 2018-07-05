@@ -35,7 +35,7 @@
 			http://modernizr.com/download/#-csstransforms3d-csstransitions-video-touch-shiv-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
 *************************************************** **/
 	window.width = jQuery(window).width();
-	const plugin_path = "/";
+	const plugin_path = "/ChenStyleTaichi/";
 
 	/* Init */
 	jQuery(window).ready(function () {
