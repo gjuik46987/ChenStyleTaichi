@@ -61,6 +61,10 @@ body {
 	font-size:14px; line-height:1.5;
 	margin:0; padding:0;
 }
+/*background music*/
+#background_music{
+	/*display: none;*/
+}
 /* example usage: index-onepage-youtube.html */
 body.has-image-bg section,
 body.has-video-bg section {
