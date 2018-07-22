@@ -73,7 +73,7 @@
                     <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
                         <div class="swiper-slide swiper-slide-active" style="margin-right: 1px;">
                             <div class="slider-video">
-                                <video id="bannerVideo" poster="images/forfun.png" preload="auto" autoplay="" loop="">
+                                <video id="bannerVideo" poster="images/forfun.png" preload="auto" loop="">
                                     <source src="videos/My_Movie.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -537,11 +537,6 @@
                     return false;
                 });
                 
-                //偵測目前寬度
-                if($(window).width<1920){
-                    //controlVideoWidth();
-                }
-
                 alertify.defaults = {
                     // dialogs defaults
                     modal:true,
@@ -617,9 +612,6 @@
             }
             function controlSubTitle(){
                 $(".display-table").fadeOut(3000);
-            }
-            function controlVideoWidth(){
-                $("section#slider .slider-video video").width($(window).width());
             }
         </script>
     </body>
