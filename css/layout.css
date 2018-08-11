@@ -70,7 +70,7 @@ body.has-video-bg section {
 
 body #wrapper {/* used by RTL*/
 	overflow:hidden; 
-	min-height:100%; /*  because short page hide long menus */
+	height:100%; /*  because short page hide long menus */
 }
 
 body.bg-grey,
@@ -3049,7 +3049,9 @@ section.dark.page-header ul.page-options a {
 			max-height:350px;
 		}
 		#topNav div.nav-main-collapse.collapse {
+			/*宏傑修改
 			display: none !important;
+			*/
 		}
 		#topNav div.nav-main-collapse.in {
 			display: block !important;
@@ -5044,6 +5046,7 @@ section#slider .slider-video {
 	z-index: 0;
 	top: 0;
 	left: 0;
+	cursor: pointer;
 }
 
 .routineVideo{
