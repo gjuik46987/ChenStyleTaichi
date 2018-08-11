@@ -2242,7 +2242,7 @@ section.dark.page-header ul.page-options a {
 		border:0;
 	}
 	#header.transparent #topMain.nav-pills>li>a {
-		color:#fff;
+		color:#000;
 
 		-webkit-border-radius: 0;
 		   -moz-border-radius: 0;
