@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Shortcut Icon" type="image/x-icon" href="images/logo.png" />
         <!-- Favicon -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -50,7 +51,7 @@
                         <!-- Logo -->
                         <a class="logo pull-left" href="index.html">
                             <!--<img src="images/1-130626112230160.jpg" alt="">--> <!-- light logo -->
-                            <img src="images/1-130626112230160.jpg" alt=""> <!-- dark logo -->
+                            <img src="images/logo.png" alt=""> <!-- dark logo -->
                         </a>
                         <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
                             <nav class="nav-main">              
@@ -106,7 +107,7 @@
         
                     <div class="lead">江弦蒼</div>
         
-                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/665320-84.png" src="images/665320-84.png" style="height:25px; width:25px" /></div>
+                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/logo.png" src="images/logo.png" style="height:35px; width:35px" /></div>
                     </div>
         
                     <div autocomplete="off" class="col-lg-6 wow fadeInLeft" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
@@ -152,7 +153,7 @@
         
                     <div class="lead"></div>
         
-                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/665320-84.png" src="images/665320-84.png" style="height:25px; width:25px" /></div>
+                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/logo.png" src="images/logo.png" style="height:35px; width:35px" /></div>
                     </div>
                     <!--
                     <div autocomplete="off" class="col-lg-6 wow fadeInLeft" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
@@ -219,7 +220,7 @@
         
                     <div class="lead">各協會簡介</div>
         
-                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/665320-84.png" src="images/665320-84.png" style="height:25px; width:25px" /></div>
+                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/logo.png" src="images/logo.png" style="height:35px; width:35px" /></div>
                     </div>
         
                     <div autocomplete="off" class="col-lg-6 wow fadeInLeft " data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
@@ -276,9 +277,14 @@
         
                     <div autocomplete="off" class="col-lg-6 wow fadeInRight" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
                         <p autocomplete="off" class="lead font-lato" data-cke-filter="off" data-cke-processor="off" style="margin-bottom: 10px">
-                            <span>我等為學習陳氏太極拳之同好，師承師父　　江弦蒼、先師爺　　潘詠周、先師祖　　陳發科一脈相傳，為利陳氏太極拳之研討、教學、推廣、弘揚等目的，特集眾人成立協會以為之。</span><br/><br/>
-
-                            <span>南投縣陳氏太極拳協會以傳承發揚陳氏太極拳武藝精華，提倡全民運動，促進縣民身心健康、快樂為宗旨。凡是贊同本會宗旨、年滿二十歲、有行為能力者，填具入會申請書，經理事會通過，並繳納入會費後，為個人會員，非常歡迎您加入成為會員。</span>
+                            <ol class="lead">
+                                <li>
+                                    105年4月16日在草屯鎮虎山國小活動中心舉辦成立大會。
+                                </li>
+                                <li>
+                                    宗旨為傳承發揚陳氏太極拳武藝精華，提倡全民運動，促進南投縣民身心健康、快樂
+                                </li>
+                            </ol>
                         </p>
                         <blockquote>
                             <p>功力為本，快樂無限</p>
@@ -352,7 +358,7 @@
                     <div autocomplete="off" class="text-center wow fadeInDown" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
                     <div style="font-size: 36px; margin-bottom: 0; font-weight: 600; font-family: 'Raleway','Open Sans',Arial,Helvetica,sans-serif; line-height: 1.5; color: #414141;">陳氏太極拳介紹</div>
         
-                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/1754833-200.png" src="images/1754833-200.png" style="height:25px; width:25px" /></div>
+                    <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/logo.png" src="images/logo.png" style="height:35px; width:35px" /></div>
                     </div>
                     
                     <header autocomplete="off" class="text-center wow fadeInDown animated" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;">
@@ -594,6 +600,9 @@
                         $("#bannerVideo").get(0).play();
                         $(".logo img").hide();
                     }
+                    if($("#wrapper").width()<$("#wrapper").height()){
+                        $("#bannerVideo").attr("poster", "images/banner2.jpg");
+                    }
                 });
                 
                 //卷軸置頂動畫
@@ -624,6 +633,10 @@
                 
                 if(isMobile()){
                     $("#wrapper").css("height","auto");
+                }
+
+                if($("#wrapper").width()<$("#wrapper").height()){
+                    $("#bannerVideo").attr("poster", "images/banner2.jpg");
                 }
             }
             function addSubTitle(){
