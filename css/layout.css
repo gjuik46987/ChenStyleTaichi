@@ -1,65 +1,24 @@
-/** ********************************************** **
-	@Author			Dorin Grigoras
-	@Website		www.stepofweb.com
-	@Last Update	Tuesday, August 25, 2015
-
-	TABLE CONTENTS
-	-------------------------------
-		Globals
-		Boxed
-		Color Background
-		Slide Top
-		Parallax Social Icons
-		Page Header
-		Top Nav
-		Menu Vertical
-		Page Menu
-		Scroll To Top
-		Preloader
-		Misc
-		Landing Page
-		Featured Grid
-		Captions
-		Aside
-		Masonry Gallery
-		Image Hover
-		Sticky Side
-		Parallax Social icons
-		Word Rotator
-		Sliders
-		Standard Forms Messages
-		Portfolio
-		Item Box
-		Mixitup
-		Blog
-		Comments
-		Timeline
-		Contact
-		Error 404
-		Maintenance
-		Login & Register
-		Search Page
-		Block Review
-		Footer
-		Responsive
-		DEMO ONLY [remove on production]
-*************************************************** **/
-
-
-
 /** Globals
  **************************************************************** **/
+ @font-face{
+	src: url("../font/Edustd-15.otf") !important;
+	src: url("../font/Edustd-15.TTF") !important;
+	font-family: '隸書' !important;
+}
+
 html, body {
 	height:100%;
 }
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:'隸書' !important;
 	-webkit-font-smoothing: antialiased;
-
-	font-size:14px; line-height:1.5;
-	margin:0; padding:0;
+	line-height:1.5;
+	font-size:14px; 
+	font-weight: 350px !important;
+	margin:0; 
+	padding:0;
 }
 
 /* example usage: index-onepage-youtube.html */
@@ -236,7 +195,7 @@ section header>h6 {
 }
 
 small { 
-	font-family: 'Lato', sans-serif; 
+	font-family: "LiSu"; 
 }
 label {
 	display:block;
@@ -330,14 +289,14 @@ section.dark h6.page-header {
 
 /* fonts */
 .font-open-sans {
-	font-family:'Open Sans',Arial,Helvetica,sans-serif !important;
+	font-family:"LiSu";
 }
 .font-lato {
 	font-weight:300;
-	font-family:'Lato',Arial,Helvetica,sans-serif !important;
+	font-family:"LiSu";
 }
 .font-raleway {
-	font-family:'Raleway',Arial,Helvetica,sans-serif !important;
+	font-family:"LiSu";
 }
 
 
@@ -619,7 +578,7 @@ body.boxed #wrapper {
 	text-align:center;
 }
 #slidetop a.slidetop-toggle:after {
-	font-family:FontAwesome;
+	font-family:"LiSu";
 	content: "\f067";
 	height:18px;
 	color:#fff;
@@ -1595,7 +1554,8 @@ section.dark.page-header ul.page-options a {
 		#header li.quick-cart .quick-cart-box {
 			position:fixed;
 			width:100%;
-			left:0; right:0;
+			left:0; 
+			right:0;
 			top:60px;
 			margin-top:0;
 			border:rgba(0,0,0,0.08) 1px solid !important;
@@ -4134,7 +4094,7 @@ svg {
     border-radius: 3px;
     background: #292929;
     color: white;
-    font-family: sans-serif, Verdana;
+    font-family: "LiSu";
     font-size: smaller;
     padding: 3px;
 }
@@ -4583,7 +4543,7 @@ section.dark .tab-post a {
 	}
 	ul.side-nav li.list-toggle:after {
 		content: "\f104";
-		font-family: FontAwesome;
+		font-family: "LiSu";
 		position: absolute;
 		font-size: 15px;
 		right: 10px;
@@ -5364,7 +5324,7 @@ section#slider .btn-default {
 		display:inline-block;
 		color: #fff;
 		background-color:rgba(0,0,0,0.7);
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:"LiSu";
 		font-weight:300;
 		padding: 6px 15px 8px 15px;
 		opacity: 1;
@@ -5414,7 +5374,7 @@ section#slider .btn-default {
 		list-style: none;
 	}
 	.camera_caption {
-		font-family:'Lato',Arial,Helvetica,sans-serif;
+		font-family:"LiSu";
 		font-size:22px;
 		font-weight:300;
 	}
@@ -5447,7 +5407,7 @@ section#slider .btn-default {
 	.ei-title h3 {
 		font-size: 60px;
 		line-height: 60px;
-		font-family: 'Open Sans', sans-serif;
+		font-family: "LiSu";
 		text-transform: uppercase;
 		font-weight:300;
 		color: #fff;
@@ -5530,7 +5490,7 @@ section#slider .btn-default {
 	}
 
 	.tparrows.round:before {
-		font-family: 'revicons';
+		font-family: "LiSu";
 	}
 	.tparrows {
 		top:50% !important;
@@ -5641,7 +5601,7 @@ section#slider .btn-default {
 		font-size:70px; /*rbt modif 90px*/
 		line-height:90px;
 		margin:0;
-		font-family:Arial,Helvetica,sans-serif;
+		font-family:"LiSu";
 	}
 	#slider div.slider-featured-text h2 {
 		text-shadow:#333 1px 1px 3px;
@@ -6282,7 +6242,7 @@ section.dark #portfolio h3 {
 h1.blog-post-title,
 .blog-post-item h2 {
 	letter-spacing:0;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:"LiSu";
 	font-size:22px;
 	margin-bottom:10px;
 }
@@ -6484,7 +6444,7 @@ h1.blog-post-title {
 	}
 .comments small {
 	font-size:12px;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:"LiSu";
 	color:#aaa;
 }
 .comments h4 {
@@ -6705,7 +6665,7 @@ li.comment a.comment-author span {
 	line-height:1;
 	color:#ccc;
 	font-weight:bold;
-	font-family:'Lato','Open Sans',Arial,Helvetica,sans-serif;
+	font-family:"LiSu";
 }
 .timeline .timeline-entry>.timeline-vline {
 	position: absolute;
@@ -6730,7 +6690,7 @@ li.comment a.comment-author span {
 	font-size:13px;
 	text-transform:uppercase;
 	font-weight:300;
-	font-family:'Open Sans',Arial,Helvetica,sans-serif;
+	font-family:"LiSu";
 }
 section.alternate .timeline .timeline-entry {
 	background-color:#F9F9F9;
@@ -6940,7 +6900,7 @@ section.dark .error-404 {
 	padding: 20px;
 	margin-top: 10%;
 	background-color: rgba(0,0,0,0.05);
-	font-family:'Open Sans';
+	font-family:"LiSu";
 	font-size:14px; 
 	line-height:23px;
 	text-align: center;
@@ -7230,7 +7190,7 @@ ul.search-history {
 	}
 	#footer ul.footer-list li small {
 		display:block;
-		font-family:'Open Sans',Arial,Helvetica,sans-serif;
+		font-family:"LiSu";
 		color:#ddd;
 	}
 
