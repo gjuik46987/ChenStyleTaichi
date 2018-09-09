@@ -7524,3 +7524,30 @@ ul.search-history {
 	}
 
 }
+/*宏傑新增*/
+.newsMenu li{
+	list-style:none;
+	float:left;
+	margin-left:15%;
+	padding-left:30px;
+	padding-right:30px;
+	cursor:pointer;
+}
+.newsContainer{
+	margin-top:150px;
+}
+.newsContent li{
+	list-style:none;
+	margin-top:15px;
+	clear:both;
+	padding-bottom:50px;
+	border-bottom:1px solid #e0e0e0;;
+}
+.newsContent li div{
+	float:left;
+	padding-left:2%;
+	padding-right:2%;
+}
+.newsDate, .newsType{
+	border-right:1px solid #e0e0e0;;
+}
