@@ -32,6 +32,8 @@
 		<link href="css/settings.css" rel="stylesheet" type="text/css" />
 		<link href="css/pack.css" rel="stylesheet" type="text/css" />
 
+        <!--color box-->
+        <link href="css/colorbox.css" rel="stylesheet" type="text/css" />
     </head>
     <body class="smoothscroll enable-animation">
         <a href="#" id="toTop" style="display: inline-block;"></a>
@@ -53,6 +55,7 @@
                             <nav class="nav-main">              
                                 <ul id="topMain" class="nav nav-pills nav-main">
                                     <li class="visible-sm visible-xs"><a href="index.html">回首頁</a></li>
+                                    <li><a href="#news">最新消息</a></li>
                                     <li><a href="#organization">組織沿革</a></li>                                                    
                                     <li><a href="#routine">拳架介紹</a></li>
                                     <li><a href="article.html">文章專區</a></li>
@@ -94,7 +97,7 @@
             <!--End Header Video-->
         </div>
         <!--最新消息開始-->
-        <section id="content">
+        <section id="news">
             <div class="container">
                 <div class="row">
                     <div autocomplete="off" class="text-center wow fadeInDown" data-cke-filter="off" data-cke-processor="off" data-wow-delay="0.4s">
@@ -102,9 +105,10 @@
                         <div class="divider divider-center divider-short"><!-- divider --><img alt="" data-cke-saved-src="images/logo2.png" src="images/logo2.png" style="height:25px; width:25px" /></div>
                         <div class="lead">
                             <ul class="newsMenu">
-                                <li>文章更新</li>
-                                <li>活動資訊</li>
-                                <li>開課訊息</li>
+                                <li data-id="0" data-type="all">全部</li>
+                                <li data-id="1" data-type="文章更新">文章更新</li>
+                                <li data-id="2" data-type="活動資訊">活動資訊</li>
+                                <li data-id="3" data-type="開課訊息">開課訊息</li>
                             </ul>
                         </div>
                         <div class="lead newsContainer" style="clear:both;">
@@ -117,7 +121,7 @@
                                         文章更新
                                     </div>
                                     <div>
-                                        有新文章刊登了~快搶先看~
+                                        <a class="inline" href="#inline_content">有新文章刊登了~快搶先看~</a>
                                     </div>
                                 </li>
                                 <li>
@@ -128,7 +132,7 @@
                                         活動資訊
                                     </div>
                                     <div>
-                                        台北推手活動~徵的就是你
+                                        <a class="inline" href="#inline_content2">台北推手活動~徵的就是你</a>
                                     </div>
                                 </li>
                                 <li>
@@ -139,7 +143,7 @@
                                         開課訊息
                                     </div>
                                     <div>
-                                        新架功夫快快學
+                                        <a class="inline" href="#inline_content3">新架功夫快快學</a>
                                     </div>
                                 </li>
                             </ul>
@@ -614,6 +618,17 @@
                 </div>
             </div>
         </footer>
+        <div id="newsContent2" style='display:none'>
+            <div id='inline_content' style='padding:10px; background:#fff;'>
+                這是第一則新聞的內容
+            </div>
+            <div id='inline_content2' style='padding:10px; background:#fff;'>
+                這是第二則新聞的內容
+            </div>
+            <div id='inline_content3' style='padding:10px; background:#fff;'>
+                這是第三則新聞的內容
+            </div>
+        </div>
         <!--footer結束-->
         <script async="" src="https://www.google-analytics.com/analytics.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -621,93 +636,8 @@
         <script type="text/javascript" src="js/jquery.sticky.js"></script>
         <script type="text/javascript" src="js/alertify.min.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
-        <script>
-            /*全域變數*/
-            var timeCount=0;
-            $(function(){
-                /*一開始的動作*/
-                /*
-                1.隱藏LOGO
-                2.三秒後播放影片跟增加字幕
-                3.十秒後隱藏字幕
-                */
-                init();
-                
-
-                /*事件區*/
-                $(".stick").sticky({ topSpacing: 0 });
-                
-                //捲軸事件
-                $(document).scroll(function() {
-                    var y = $(this).scrollTop();
-                    if(y >= 10 && y<=300){
-                        $(".logo img").show();
-                    }
-                    else if (y > 300) {
-                        $("#bannerVideo").get(0).pause();
-                        removeSubTitle();
-                    } 
-                    else {
-                        $("#bannerVideo").get(0).play();
-                        $(".logo img").hide();
-                    }
-                    if($("#wrapper").width()<$("#wrapper").height()){
-                        $("#bannerVideo").attr("poster", "images/banner2.jpg");
-                    }
-                });
-                
-                //卷軸置頂動畫
-                $('.js-scrollTo').on('click', function() { // Au clic sur un élément
-                    var page = $(this).attr('href'); // Page cible
-                    var speed = 750; // Durée de l'animation (en ms)
-                    $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-                    return false;
-                });
-            });
-            
-            function init(){
-                $(".logo img").hide();
-
-                setInterval(function(){ 
-                    timeCount++;
-                    if(timeCount%10==0){
-                        removeSubTitle();
-                    }
-                    if(timeCount/3==1){
-                        $("#bannerVideo").get(0).load();
-                        $("#bannerVideo").get(0).play();
-                        if($("#bannerVideo").get(0).played){
-                            addSubTitle();
-                        }
-                    }
-                }, 1000);
-                
-                if(isMobile()){
-                    $("#wrapper").css("height","auto");
-                }
-
-                if($("#wrapper").width()<$("#wrapper").height()){
-                    $("#bannerVideo").attr("poster", "images/banner2.jpg");
-                }
-            }
-            function addSubTitle(){
-                $(".display-table").fadeIn(3000);
-            }
-            function removeSubTitle(){
-                $(".display-table").fadeOut(3000);
-            }
-            function removeSubTitleQuickly(){
-                $(".display-table").fadeOut(10);
-            }
-            function isMobile() {
-                try{ 
-                    document.createEvent("TouchEvent"); return true; 
-                }
-                catch(e){ 
-                    return false;
-                }
-            }
-        </script>
+        <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
         
