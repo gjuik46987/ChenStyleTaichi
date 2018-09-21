@@ -26,6 +26,7 @@ $(function(){
 		else {
 			$("#bannerVideo").get(0).play();
 			$(".logo img").hide();
+			$(".btn-mobile").css("color", "white");
 		}
 		if($("#wrapper").width()<$("#wrapper").height()){
 			$("#bannerVideo").attr("poster", "images/banner2.jpg");
@@ -45,6 +46,8 @@ $(function(){
 		$(".newsMenu li").removeAttr("style");
 		$(this).css("color", "#E29063").css("border-bottom", "1px solid #E29063");
 		renderNews($(this).attr("data-type"));
+		/*colorbox */
+		$(".inline").colorbox({inline:true, width:"70%"});
 	});
 });
 
