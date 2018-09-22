@@ -352,6 +352,7 @@
      
      .fb5-cont-page-book{
          position:absolute;		
+         border:0.5px solid gray;
      }
      
      #fb5 .fb5-page-book {
