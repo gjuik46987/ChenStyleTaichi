@@ -131,7 +131,7 @@ function renderBook(){
 	/*繪製內容*/
 	$.each(book, function(index, array){
 		$.each(array.article, function(index2, array2){
-			if(index2&2==0){
+			if(index2%2==0){
 				render+="<div data-background-image=\"\" class=\"fb5-double fb5-first\">";
 			}
 			else{
@@ -143,7 +143,7 @@ function renderBook(){
 			render+="<p>"+array2.content+"</p>";
 			render+="</div>";    
 			render+="<div class=\"fb5-meta\">";
-			render+="<span class=\"fb5-num\">"+(index+2)+"</span>";
+			render+="<span class=\"fb5-num\">"+(index2+2)+"</span>";
 			render+="<span class=\"fb5-description\">Publish 2016</span>";
 			render+="</div>";
 			render+="</div>";
