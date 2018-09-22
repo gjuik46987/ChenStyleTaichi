@@ -144,7 +144,7 @@ function renderBook(){
 			render+="</div>";    
 			render+="<div class=\"fb5-meta\">";
 			render+="<span class=\"fb5-num\">"+(index2+2)+"</span>";
-			render+="<span class=\"fb5-description\">Publish 2016</span>";
+			render+="<span class=\"fb5-description\"></span>";
 			render+="</div>";
 			render+="</div>";
 			render+="</div>";
