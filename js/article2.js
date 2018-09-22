@@ -131,7 +131,12 @@ function renderBook(){
 	/*繪製內容*/
 	$.each(book, function(index, array){
 		$.each(array.article, function(index2, array2){
-			render+="<div data-background-image=\"\" class=\"\">";
+			if(index2&2==0){
+				render+="<div data-background-image=\"\" class=\"fb5-double fb5-first\">";
+			}
+			else{
+				render+="<div data-background-image=\"\" class=\"fb5-double fb5-second\">";
+			}
 			render+="<div class=\"fb5-cont-page-book\">";
 			render+="<div class=\"fb5-page-book\">";
 			render+="<h1>"+array.title+"</h1>";
@@ -145,5 +150,16 @@ function renderBook(){
 			render+="</div>";
 		});
 	});
+	/*繪製最末頁*/
+	render+="<div data-background-image=\"\" class=\"\">";               
+	render+="<div class=\"fb5-cont-page-book\">"
+	render+="<div class=\"fb5-page-book\">";                                                   
+	render+="</div>";                                                   
+	render+="<div class=\"fb5-meta\">";
+	render+="<span class=\"fb5-num\"></span>";
+	render+="<span class=\"fb5-description\"></span>";
+	render+="</div>";                                           
+	render+="</div>";                        
+	render+="</div>";
 	$("#fb5-book").html(render);
 }
