@@ -7570,3 +7570,18 @@ ul.search-history {
 		padding-bottom:35px;
 	}
 }
+
+/*member.html的畫面*/
+.member_video li{
+	list-style:none;
+	margin:5px;
+	padding:5px;
+	width:30%;
+	border:1px solid #e0e0e0;
+	text-align:center;
+	background-color:#FAFAFA;
+	float:left;
+}
+.member_video li img{
+	width:100%;
+}

@@ -5,7 +5,7 @@ $(function(){
 	//捲軸事件
 	$(document).scroll(function() {
 		var y = $(this).scrollTop();
-		if(y >= 10 && y<=300){
+		if(y >= 10){
 			$(".logo img").show();
 		}
 		else {
@@ -26,6 +26,9 @@ function init(){
 	renderBook();
 	$(".logo img").hide();
 	$("#loading").hide();
+	if($("#wrapper").width()<$("#wrapper").height()){
+		$("#bannerVideo").attr("poster", "images/banner2.jpg");
+	}
 
 	/*CONFIGURATION FLIPBOOK*/
 	jQuery('#fb5').data('config',
