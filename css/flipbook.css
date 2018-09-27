@@ -1,5 +1,22 @@
+@font-face{
+	font-family: 'Lisu';
+	src: url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
+	src:local('☺'),
+		url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family: 'Lisu2';
+	src: url("../font/Edustd-15.TTF") format('truetype');
+	src:local('☺'),
+		url("../font/Edustd-15.TTF") format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
 #fb5{
-    font-family:Arial,sans-serif;	
+    font-family:'Lisu','Lisu2',Arial,sans-serif !important;	
     font-size:14px;	
     position:relative;
     overflow:hidden;
@@ -303,7 +320,7 @@
      #fb5 .fb5-meta .fb5-description {
              font-size: 11px;
              color: #666;
-             font-family:Arial,sans-serif;
+             /*font-family:Arial,sans-serif;*/
      }
  
      #fb5 .fb5-meta.fb5-left { 
@@ -352,7 +369,7 @@
      
      .fb5-cont-page-book{
          position:absolute;		
-         border:0.5px solid gray;
+         border:0.5px solid #DFDFDF;
      }
      
      #fb5 .fb5-page-book {
@@ -398,7 +415,7 @@
      #fb5 .fb5-page-book h4,
      #fb5 .fb5-page-book h5,
      #fb5 .fb5-page-book h6 {
-        font-family:Arial,sans-serif;
+        /*font-family:Arial,sans-serif;*/
         text-transform:none;
         margin:0px;
         
@@ -655,7 +672,7 @@
          /* formatt page for flipbook  /*/
          #fb5 .fb5-page-book p {
             color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:14px;
          }
          #fb5 .fb5-page-book a {
@@ -663,37 +680,37 @@
           }
          #fb5 .fb5-page-book h1 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:28px;
          }
          #fb5 .fb5-page-book h2 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:26px;
          }
          #fb5 .fb5-page-book h3 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:24px;
          }
          #fb5 .fb5-page-book h4 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:22px;
          }
          #fb5 .fb5-page-book h5 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:20px;
          }
          #fb5 .fb5-page-book h6 {
                color:#77797F;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:18px;
          }
          #fb5 .fb5-page-book li {
             color:#77797F;	
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:14px;		
          }
          #fb5 .fb5-page-book ul li a {
@@ -704,7 +721,7 @@
          /*  about style  /*/
          #fb5 #fb5-about p,#fb5 #fb5-about li {
             color: #CFEAEE;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:11px;
          }  
          #fb5 #fb5-about a {
@@ -712,31 +729,31 @@
          }
          #fb5 #fb5-about h1 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:26px;
          }  
          #fb5 #fb5-about h2 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:24px;
          }  
          #fb5-about h3 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:22px;
          }  
          #fb5 #fb5-about h4 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
          }  
          #fb5 #fb5-about h5 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:18px;
          }  
          #fb5 #fb5-about h6 {
             color: #64C8D3;
-            font-family:Arial;
+            /*font-family:Arial;*/
             font-size:16px;
          }  
          /* back  button  /*/
