@@ -109,11 +109,11 @@ function getNews(){
 	var arrayId=[1, 2, 3];
 	var arrayDate=["2018/09/10", "2018/09/11", "2018/09/12"];
 	var arrayType=["文章更新", "活動資訊", "開課訊息"];
-	var arrayTitle=["標題1", "標題2", "標題3"];
+	var arrayTitle=["文章上架", "2018年活動訊息", "2018年開課訊息"];
 	var arrayContent=[
-		"這是第一則新聞的內容",
-		"這是第二則新聞的內容",
-		"這是第三則新聞的內容"
+		"目前網站收錄的文章為：正負之間、漫漫太極路。詳見文章專區。若對江老師其他文章有興趣的話，亦可至兩儀小學堂。網址：<a href=\"http://tgchiang.pixnet.net/blog\" target=\"_blank\">http://tgchiang.pixnet.net/blog</a>",
+		"2018年相關活動如下：<br/><ol><li>2018/12/31 台北推手聯誼會</li></ol>",
+		"2018年開課資訊如下：<ol><li>授課地點:台中<br/>授課時間:每週六 07:30~09:30<br/>教授內容:新架</li><li>授課地點:彰化<br/>授課時間:每週日 07:30~09:30<br/>教授內容:老架</li></ol>"
 	]
 	for(var i=0; i<3; i++){
 		var objectNews={

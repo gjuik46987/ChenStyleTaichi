@@ -6799,6 +6799,8 @@ ul.search-history {
 	.newsMenu li{
 		padding-left:2px;
 		padding-right:2px;
+		font-size:16px;
+		margin-left:5%;
 	}
 	.newsContent li{
 		margin-right:50px;
