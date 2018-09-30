@@ -1,7 +1,9 @@
+var arrayBookMarkRecord=[];
 $(function(){
 	/*翻書初始化*/
 	init();
-	
+	//書籤初始化
+	initBookMark();
 	//捲軸事件
 	$(document).scroll(function() {
 		var y = $(this).scrollTop();
@@ -19,6 +21,14 @@ $(function(){
 		var speed = 750; // Durée de l'animation (en ms)
 		$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
 		return false;
+	});
+
+	//加入書籤的動作
+	$(document).on("click", ".bookmark", function(){
+		let page=$(this).parent("div").next("div").find(".fb5-num").text();
+		let title=$(this).prev("h1").text();
+		toAddBookMarkRecord(title, page);
+		initBookMark();
 	});
 });
 
@@ -175,7 +185,7 @@ function renderBook(){
 			}
 			render+="<div class=\"fb5-cont-page-book\">";
 			render+="<div class=\"fb5-page-book\">";
-			render+="<h1>"+array.title+"</h1>";
+			render+="<h1>"+array.title+"</h1><a class=\"bookmark\" href=\"javascript:void(0)\" style=\"margin-left:45%;\">(加入書籤)</a>";
 			render+="<p>"+array2.content+"</p>";
 			render+="</div>";    
 			render+="<div class=\"fb5-meta\">";
@@ -198,4 +208,29 @@ function renderBook(){
 	render+="</div>";                        
 	render+="</div>";
 	$("#fb5-book").html(render);
+}
+
+function initBookMark(){
+	if(localStorage.getItem("bookMark")!=null){
+		arrayBookMarkRecord = localStorage.getItem("bookMark");
+		var table="";
+		$.each(arrayBookMarkRecord, function(index, array){
+			table+="<tr>";
+			table+="<td>"+array.title+"</td>";
+			table+="<td>"+array.page+"</td>";
+			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:void(0)\" data-page=\""+array.page+"\">前往此頁</a></td>";
+			table+="</tr>";
+		});
+		$("#bookMark tr").next().remove();
+		$("#bookMark tr").after(table);
+	}
+}
+
+function toAddBookMarkRecord(title, page){
+	var objBookMarkRecord={
+		title: title,
+		page: page
+	};
+	arrayBookMarkRecord.push(objBookMarkRecord);
+	localStorage.setItem("bookMark", arrayBookMarkRecord);
 }
