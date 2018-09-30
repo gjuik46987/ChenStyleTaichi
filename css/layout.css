@@ -6822,3 +6822,8 @@ ul.search-history {
 .member_video li img{
 	width:50%;
 }
+@media only screen and (max-width: 500px) {
+	.member_video li{
+		width: 98%;
+	}
+}
