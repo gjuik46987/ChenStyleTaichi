@@ -219,7 +219,7 @@ function initBookMark(){
 			table+="<tr>";
 			table+="<td>"+array.title+"</td>";
 			table+="<td>"+array.page+"</td>";
-			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:void(0)\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\">刪除書籤</a></td>";
+			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:setPage("+array.page+")\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\">刪除書籤</a></td>";
 			table+="</tr>";
 		});
 		$("#bookMark tr").next().remove();
