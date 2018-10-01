@@ -6807,7 +6807,15 @@ ul.search-history {
 		padding-bottom:35px;
 	}
 }
-
+/*文章專區的畫面*/
+#bookMark{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#bookMark th{
+	text-align: center;
+}
 /*member.html的畫面*/
 .member_video li{
 	list-style:none;

@@ -212,13 +212,14 @@ function renderBook(){
 
 function initBookMark(){
 	if(localStorage.getItem("bookMark")!=null){
-		arrayBookMarkRecord = localStorage.getItem("bookMark");
+		arrayBookMarkRecord = JSON.parse(localStorage.getItem("bookMark"));
+		var objBookMark = JSON.parse(localStorage.getItem("bookMark"));
 		var table="";
-		$.each(arrayBookMarkRecord, function(index, array){
+		$.each(objBookMark, function(index, array){
 			table+="<tr>";
 			table+="<td>"+array.title+"</td>";
 			table+="<td>"+array.page+"</td>";
-			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:void(0)\" data-page=\""+array.page+"\">前往此頁</a></td>";
+			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:void(0)\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\">刪除書籤</a></td>";
 			table+="</tr>";
 		});
 		$("#bookMark tr").next().remove();
@@ -232,5 +233,5 @@ function toAddBookMarkRecord(title, page){
 		page: page
 	};
 	arrayBookMarkRecord.push(objBookMarkRecord);
-	localStorage.setItem("bookMark", arrayBookMarkRecord);
+	localStorage.setItem("bookMark", JSON.stringify(arrayBookMarkRecord));
 }
