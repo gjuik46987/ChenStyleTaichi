@@ -224,7 +224,7 @@ function toDeleteMarkRecord(title, page){
 		if(array.title == title && array.page == page){			
 			
 			arrayBookMarkRecord.splice(index, 1);
-			alert(JSON.stringify(arrayBookMarkRecord));
+			//alert(JSON.stringify(arrayBookMarkRecord));
 			return false;
 		}
 	});
