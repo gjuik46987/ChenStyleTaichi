@@ -30,6 +30,12 @@ $(function(){
 		toAddBookMarkRecord(title, page);
 		initBookMark();
 	});
+
+	//刪除書籤
+	$(document).on("click", ".delete", function(){
+		toDeleteMarkRecord($(this).attr("data-title"), $(this).attr("data-page"));
+		initBookMark();
+	});
 });
 
 function init(){
@@ -219,7 +225,7 @@ function initBookMark(){
 			table+="<tr>";
 			table+="<td>"+array.title+"</td>";
 			table+="<td>"+array.page+"</td>";
-			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:setPage("+array.page+")\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\">刪除書籤</a></td>";
+			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:setPage("+array.page+")\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\" data-title=\""+array.title+"\" data-page=\""+array.page+"\">刪除書籤</a></td>";
 			table+="</tr>";
 		});
 		$("#bookMark tr").next().remove();
@@ -233,5 +239,17 @@ function toAddBookMarkRecord(title, page){
 		page: page
 	};
 	arrayBookMarkRecord.push(objBookMarkRecord);
+	localStorage.setItem("bookMark", JSON.stringify(arrayBookMarkRecord));
+}
+
+function toDeleteMarkRecord(title, page){
+	arrayBookMarkRecord = JSON.parse(localStorage.getItem("bookMark"));
+	$.each(arrayBookMarkRecord, function(index, array){
+		if(array.title == title && array.page == page){			
+			alert(index);
+			arrayBookMarkRecord = arrayBookMarkRecord.splice(index, 1);
+			return false;
+		}
+	});
 	localStorage.setItem("bookMark", JSON.stringify(arrayBookMarkRecord));
 }
