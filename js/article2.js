@@ -25,9 +25,10 @@ $(function(){
 
 	//加入書籤的動作
 	$(document).on("click", ".bookmark", function(){
+		let id=$(this).attr("data-id");
 		let page=$(this).parent("div").next("div").find(".fb5-num").text();
 		let title=$(this).prev("h1").text();
-		toAddBookMarkRecord(title, page);
+		toAddBookMarkRecord(id, title, page);
 		initBookMark();
 	});
 
@@ -36,10 +37,15 @@ $(function(){
 		toDeleteMarkRecord($(this).attr("data-title"), $(this).attr("data-page"));
 		initBookMark();
 	});
+
+	//選擇書籤
+	$(document).on("click", ".bookMarkRecord", function(){
+		setPage($(this).attr("data-page"));
+	});
 });
 
 function init(){
-	renderBook();
+	renderBook($.UrlParam("id"), 1);
 	$(".logo img").hide();
 	$("#loading").hide();
 	if($("#wrapper").width()<$("#wrapper").height()){
@@ -134,8 +140,11 @@ function initBookStore(id){
 	return filterBook;
 }
 
-function renderBook(){
-	var book = initBookStore($.UrlParam("id"));
+function renderBook(id, type){
+	if(typeof($.UrlParam("id"))!="undefined" && type=="1"){
+		id=$.UrlParam("id");
+	}
+	var book = initBookStore(id);
 	var render = "";
 	/*先繪製封面*/
 	render+="<div data-background-image=\"\" class=\"\">";
@@ -167,7 +176,7 @@ function renderBook(){
 			}
 			render+="<div class=\"fb5-cont-page-book\">";
 			render+="<div class=\"fb5-page-book\">";
-			render+="<h1>"+array.title+"</h1><a class=\"bookmark\" href=\"javascript:void(0)\" style=\"margin-left:45%;\">(加入書籤)</a>";
+			render+="<h1>"+array.title+"</h1><a class=\"bookmark\" href=\"javascript:void(0)\" style=\"margin-left:45%;\" data-id=\""+array.id+"\">(加入書籤)</a>";
 			render+="<p>"+array2.content+"</p>";
 			render+="</div>";    
 			render+="<div class=\"fb5-meta\">";
@@ -196,12 +205,15 @@ function initBookMark(){
 	if(localStorage.getItem("bookMark")!=null){
 		arrayBookMarkRecord = JSON.parse(localStorage.getItem("bookMark"));
 		var objBookMark = JSON.parse(localStorage.getItem("bookMark"));
+		var filterBookMark = objBookMark.filter(function(item, index, array){
+			return item.id == $.UrlParam("id");       // 取得相同書本ID的書籤
+		});
 		var table="";
-		$.each(objBookMark, function(index, array){
+		$.each(filterBookMark, function(index, array){
 			table+="<tr>";
 			table+="<td>"+array.title+"</td>";
 			table+="<td>"+array.page+"</td>";
-			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:setPage("+array.page+")\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\" data-title=\""+array.title+"\" data-page=\""+array.page+"\">刪除書籤</a></td>";
+			table+="<td><a class=\"bookMarkRecord\" href=\"javascript:void(0)\" data-id=\""+array.id+"\" data-page=\""+array.page+"\">前往此頁</a>　｜　<a class=\"delete\" href=\"javascript:void(0)\" data-title=\""+array.title+"\" data-page=\""+array.page+"\">刪除書籤</a></td>";
 			table+="</tr>";
 		});
 		$("#bookMark tr").next().remove();
@@ -209,8 +221,9 @@ function initBookMark(){
 	}
 }
 
-function toAddBookMarkRecord(title, page){
+function toAddBookMarkRecord(id, title, page){
 	var objBookMarkRecord={
+		id: id,
 		title: title,
 		page: page
 	};
