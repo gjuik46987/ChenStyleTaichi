@@ -2,17 +2,9 @@
  **************************************************************** **/
  @font-face{
 	font-family: 'Lisu';
-	src: url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
+	src: url("../font/lisu.ttf") format('truetype');
 	src:local('☺'),
-		url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
-	font-weight:normal;
-	font-style:normal;
-}
-@font-face{
-	font-family: 'Lisu2';
-	src: url("../font/Edustd-15.TTF") format('truetype');
-	src:local('☺'),
-		url("../font/Edustd-15.TTF") format('truetype');
+		url("../font/lisu.ttf") format('truetype');
 	font-weight:normal;
 	font-style:normal;
 }
@@ -22,7 +14,7 @@ html, body{
 body {
 	color:#666;
 	background-color:#fff;
-	font-family:sans-serif, 'Lisu', 'Lisu2' !important;
+	font-family:'Lisu' !important;
 	-webkit-font-smoothing: antialiased;
 	line-height:1.5;
 	font-size:14px; 
