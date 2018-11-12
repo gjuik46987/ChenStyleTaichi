@@ -191,7 +191,7 @@ section header>h6 {
 }
 
 small { 
-	font-family: "Lisu" !important; 
+	font-family: 'cwTeXYen', sans-serif !important; 
 }
 label {
 	display:block;
@@ -276,14 +276,14 @@ section.dark .thumbnail {
 
 /* fonts */
 .font-open-sans {
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 }
 .font-lato {
 	font-weight:300;
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 }
 .font-raleway {
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 }
 
 
@@ -3324,7 +3324,7 @@ svg {
     border-radius: 3px;
     background: #292929;
     color: white;
-    font-family: "Lisu" !important;
+    font-family: 'cwTeXYen', sans-serif !important;
     font-size: smaller;
     padding: 3px;
 }
@@ -3773,7 +3773,7 @@ section.dark .tab-post a {
 	}
 	ul.side-nav li.list-toggle:after {
 		content: "\f104";
-		font-family: "Lisu" !important;
+		font-family: 'cwTeXYen', sans-serif !important;
 		position: absolute;
 		font-size: 15px;
 		right: 10px;
@@ -4554,7 +4554,7 @@ section#slider .btn-default {
 		display:inline-block;
 		color: #fff;
 		background-color:rgba(0,0,0,0.7);
-		font-family:"Lisu" !important;
+		font-family:'cwTeXYen', sans-serif !important;
 		font-weight:300;
 		padding: 6px 15px 8px 15px;
 		opacity: 1;
@@ -4604,7 +4604,7 @@ section#slider .btn-default {
 		list-style: none;
 	}
 	.camera_caption {
-		font-family:"Lisu" !important;
+		font-family:'cwTeXYen', sans-serif !important;
 		font-size:22px;
 		font-weight:300;
 	}
@@ -4637,7 +4637,7 @@ section#slider .btn-default {
 	.ei-title h3 {
 		font-size: 60px;
 		line-height: 60px;
-		font-family: "Lisu" !important;
+		font-family: 'cwTeXYen', sans-serif !important;
 		text-transform: uppercase;
 		font-weight:300;
 		color: #fff;
@@ -4720,7 +4720,7 @@ section#slider .btn-default {
 	}
 
 	.tparrows.round:before {
-		font-family: "Lisu" !important;
+		font-family: 'cwTeXYen', sans-serif !important;
 	}
 	.tparrows {
 		top:50% !important;
@@ -4831,7 +4831,7 @@ section#slider .btn-default {
 		font-size:70px; /*rbt modif 90px*/
 		line-height:90px;
 		margin:0;
-		font-family:"Lisu" !important;
+		font-family:'cwTeXYen', sans-serif !important;
 	}
 	#slider div.slider-featured-text h2 {
 		text-shadow:#333 1px 1px 3px;
@@ -5472,7 +5472,7 @@ section.dark #portfolio h3 {
 h1.blog-post-title,
 .blog-post-item h2 {
 	letter-spacing:0;
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 	font-size:22px;
 	margin-bottom:10px;
 }
@@ -5674,7 +5674,7 @@ h1.blog-post-title {
 	}
 .comments small {
 	font-size:12px;
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 	color:#aaa;
 }
 .comments h4 {
@@ -5895,7 +5895,7 @@ li.comment a.comment-author span {
 	line-height:1;
 	color:#ccc;
 	font-weight:bold;
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 }
 .timeline .timeline-entry>.timeline-vline {
 	position: absolute;
@@ -5920,7 +5920,7 @@ li.comment a.comment-author span {
 	font-size:13px;
 	text-transform:uppercase;
 	font-weight:300;
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 }
 section.alternate .timeline .timeline-entry {
 	background-color:#F9F9F9;
@@ -6130,7 +6130,7 @@ section.dark .error-404 {
 	padding: 20px;
 	margin-top: 10%;
 	background-color: rgba(0,0,0,0.05);
-	font-family:"Lisu" !important;
+	font-family:'cwTeXYen', sans-serif !important;
 	font-size:14px; 
 	line-height:23px;
 	text-align: center;
@@ -6420,7 +6420,7 @@ ul.search-history {
 	}
 	#footer ul.footer-list li small {
 		display:block;
-		font-family:"Lisu" !important;
+		font-family:'cwTeXYen', sans-serif !important;
 		color:#ddd;
 	}
 
