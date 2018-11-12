@@ -6771,12 +6771,18 @@ ul.search-history {
 	margin-top:15px;
 	clear:both;
 	padding-bottom:50px;
-	border-bottom:1px solid #e0e0e0;;
+	border-bottom:1px solid #e0e0e0;
+}
+.newsContent li:after{
+	content: "";
+	display: table;
+	clear: both;
 }
 .newsContent li div{
 	float:left;
 	padding-left:2%;
 	padding-right:2%;
+	line-height:24px;
 }
 .newsDate, .newsType{
 	border-right:1px solid #e0e0e0;;
