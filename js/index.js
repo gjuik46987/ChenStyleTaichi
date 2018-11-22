@@ -22,9 +22,12 @@ $(function(){
 		else if (y > 300) {
 			$("#bannerVideo").get(0).pause();
 			removeSubTitle();
+			
 		} 
 		else {
-			$("#bannerVideo").get(0).play();
+			if($("#wrapper").width()>=1024){
+				$("#bannerVideo").get(0).play();
+			}
 			$(".logo img").hide();
 			$(".btn-mobile").css("color", "white");
 		}
@@ -49,6 +52,10 @@ $(function(){
 		/*colorbox */
 		$(".inline").colorbox({inline:true, width:"70%"});
 	});
+
+	$(".newsMenu2").change(function(){
+		renderLatestNews($(this).val());
+	});
 });
 
 function init(){
@@ -72,6 +79,11 @@ function init(){
 	
 	if(isMobile()){
 		$("#wrapper").css("height","auto");
+	}
+
+	//螢幕寬度小於1024不播放影片
+	if($("#wrapper").width()<1024){
+		$("#bannerVideo").get(0).pause();
 	}
 
 	if($("#wrapper").width()<$("#wrapper").height()){

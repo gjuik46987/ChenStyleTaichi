@@ -1,23 +1,6 @@
-@font-face{
-	font-family: 'Lisu';
-	src: url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
-	src:local('☺'),
-		url("../font/aoyagireisyosimo_ttf_2_01.ttf") format('truetype');
-	font-weight:normal;
-	font-style:normal;
-}
-@font-face{
-	font-family: 'Lisu2';
-	src: url("../font/Edustd-15.TTF") format('truetype');
-	src:local('☺'),
-		url("../font/Edustd-15.TTF") format('truetype');
-	font-weight:normal;
-	font-style:normal;
-}
-
 #fb5{
-    font-family:'Lisu','Lisu2',Arial,sans-serif !important;	
-    font-size:14px;	
+    font-family:'cwTeXYen', sans-serif !important;	
+    font-size:21px !important;	
     position:relative;
     overflow:hidden;
     margin:0 auto;
@@ -673,7 +656,7 @@
          #fb5 .fb5-page-book p {
             color:#77797F;
             /*font-family:Arial;*/
-            font-size:14px;
+            font-size:21px;
          }
          #fb5 .fb5-page-book a {
             color:#64C8D3;

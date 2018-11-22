@@ -11,7 +11,7 @@ body {
 	font-family: 'cwTeXYen', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	line-height:1.5;
-	font-size:16px; 
+	font-size:21px !important; 
 	font-weight: 350px !important;
 	margin:0; 
 	padding:0;
@@ -1026,7 +1026,7 @@ img.img-responsive {
 	}
 	body.menu-vertical #mainMenu.sidebar-vertical ul.top-links .dropdown-menu>li>a {
 		padding: 3px 6px;
-		font-size: 12px;
+		font-size: 21px;
 	}
 	body.menu-vertical #mainMenu.sidebar-vertical ul.top-links a.dropdown-toggle {
 		background-color:rgba(0,0,0,0.1) !important;
@@ -2147,7 +2147,7 @@ img.img-responsive {
 		line-height:23px;
 
 		color:#666;
-		font-size:12px;
+		font-size:21px;
 		display:block;
 		text-decoration:none;
 	}
@@ -6791,13 +6791,16 @@ ul.search-history {
 	.newsMenu li{
 		padding-left:2px;
 		padding-right:2px;
-		font-size:16px;
+		font-size:21px;
 		margin-left:5%;
 	}
 	.newsContent li{
 		margin-right:50px;
 		padding-bottom:35px;
 	}
+}
+.btn{
+	color:black !important;
 }
 /*文章專區的畫面*/
 #bookMark{
