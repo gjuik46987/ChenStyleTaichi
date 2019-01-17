@@ -1,0 +1,128 @@
+
+body{
+    /*background-color:#eeecdd;*/
+    background: linear-gradient(180deg, rgba(237, 236, 221, 1)32%, rgba(216, 213, 181, 0.9)76%);
+    background: -moz-linear-gradient(180deg, rgba(237, 236, 221, 1)32%, rgba(216, 213, 181, 0.9)76%);
+    background: -webkit-linear-gradient(180deg, rgba(237, 236, 221, 1)32%, rgba(216, 213, 181, 0.9)76%);
+    background: -o-linear-gradient(180deg, rgba(237, 236, 221, 1)32%, rgba(216, 213, 181, 0.9)76%);
+    margin:0;
+    padding:0;
+}
+.container-fluid{
+    background:url('../images/introbg_L.png');
+    background-size:cover;
+    background-attachment: fixed;
+    width:100%;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+
+
+}
+
+.inner{
+    width:60%;
+    margin:5rem auto;
+    /*background:#ccc;*/
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .inner{
+        width:100%;
+        margin:1rem 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .inner{
+        width:80%;
+    }
+}
+.masterImg{
+    width:35%;
+    margin:0 auto;
+}
+/*手機至平板*/
+@media screen and (min-width: 320px) and (max-width: 575px){
+    .masterImg{
+        width:80%;
+    }
+}
+/*小平板至大平板*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .masterImg{
+        width:70%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .masterImg{
+        width:60%;
+    }
+}
+.masterImg img{
+    width:100%;
+
+}
+.inner_title{
+    width:40%;
+    margin:0 auto;
+    padding:1.5rem 0;
+    border-bottom:2px solid rgba(0,0,0,0.2);
+}
+
+/*手機至平板*/
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .inner_title{
+        width:80%;
+        padding:0.5rem 0;
+    }
+}
+/*小平板至大平板*/
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .inner_title{
+        width:70%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1200px){
+    .inner_title{
+        width:80%;
+    }
+}
+
+.inner_title img{
+    width:100%;
+}
+.inner_sub{
+    text-align:center;
+    font-size:1.2rem;
+    margin:2rem 0;
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .inner_sub{
+        font-size:0.8rem;
+    }
+}
+.inner_btnlist{
+    margin:2rem 0;
+    text-align:center;
+
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .inner_btnlist{
+        margin:0.5rem 0;
+    }
+}
+.inner_btnlist button{
+    background:#b8945e;
+    border-radius:1.5rem;
+    width:15rem;
+    height:4rem;
+    color:#fff;
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .inner_btnlist button{
+        width:90%;
+    }
+}
