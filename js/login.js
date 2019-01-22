@@ -5,5 +5,5 @@ $(function(){
 });
 
 function toLogin(){
-	location.href="index.html";
+	location.href="ChenStyleTaichi/index.html";
 }
